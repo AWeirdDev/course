@@ -16,12 +16,12 @@ class: bg-orange-50 dark:bg-black
     <ul>
         <li v-click="1">
             <b>興趣：</b>
-            浪費生命、研究系統架構（也就是浪費生命）
+            浪費時間、研究系統架構（也就是浪費時間）
         </li>
         <li v-click="2">
             <b>專長：</b>
-            浪費生命、網頁、
-            <span v-mark.circle.orange="2">初階</span>系統語言
+            浪費時間、網頁、
+            初階系統語言（太菜了）
         </li>
         <li v-click="3">
             <b>學歷：</b>

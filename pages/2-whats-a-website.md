@@ -7,14 +7,13 @@ transition: slide-up
 # 網站哪來的？
 造訪網站時經過<b>伺服器處理</b>，到了你的<b>瀏覽器</b>的時候，如果沒有問題就可以被你看見。
 
-
 <div class="icons mt-30" :class="{ 'is-disabled': $clicks > 0 }">
     <div class="flex flex-row items-center justify-center gap-4 text-8xl">
         <lucide-laptop />
-        <lucide-arrow-right />
-        <lucide-globe />
-        <lucide-arrow-right />
-        <lucide-app-window />
+        <lucide-arrow-right class="text-gray" />
+        <lucide-globe class="text-yellow-500" />
+        <lucide-arrow-right class="text-gray" />
+        <lucide-compass class="text-blue-500" />
     </div>
 </div>
 
@@ -54,22 +53,21 @@ transition: slide-up
 
 # 瀏覽器怎麼知道網站長怎樣？
 
-
 <div class="flex flex-row gap-10 items-center justify-center mt-30">
     <div class="flex flex-col items-center gap-2">
         <img src="../images/2_html.png" width="120" />
         <h3 class="!m-0" v-click>HTML</h3>
-        <p class="!m-0 text-center" v-click>網站內容怎樣主要他管的<br />網站的骨架</p>
+        <p class="!m-0 text-center" v-click>網站內容主要他管的<br />（網站的骨架）</p>
     </div>
     <div class="flex flex-col items-center gap-2">
         <img src="../images/2_css.png" width="120" />
         <h3 class="!m-0" v-click>CSS</h3>
-        <p class="!m-0 text-center" v-click>網站好看都是他害的<br />大部分都挺直觀</p>
+        <p class="!m-0 text-center" v-click>網站好看都是他害的<br />（網頁的外觀）</p>
     </div>
     <div class="flex flex-col items-center gap-2">
         <img src="../images/2_js.png" width="120" />
         <h3 class="!m-0" v-click>JavaScript</h3>
-        <p class="!m-0 text-center" v-click>世上最人性化的語言<br />讓網站變有用</p>
+        <p class="!m-0 text-center" v-click>網站難用都他造成的<br />（網頁的神經）</p>
     </div>
 </div>
 
@@ -85,11 +83,11 @@ transition: fade
 </div>
 
 <div class="absolute top-0 bottom-0 mt-24">
-    <p v-click="1">我們可以一個一個拆開來看：</p>
+    <p v-click="1">我們可以一層一層拆開來看：</p>
     <ul>
-        <li v-click="2"><b>第一層：</b>HTML – 整個網頁的骨架</li>
+        <li v-click="2"><b>第一層：</b>HTML – 整個網頁的骨架，最基礎的一層</li>
         <li v-click="3"><b>第二層：</b>CSS – 把網頁弄得漂亮，就是你眼前所看到的網站</li>
-        <li v-click="4"><b>第三層：</b>JavaScript – 讓網站真的可以做事</li>
+        <li v-click="4"><b>第三層：</b>JavaScript – 讓網站真的可以做事，像是搜尋建議、即時搜尋結果</li>
     </ul>
 </div>
 
@@ -144,16 +142,14 @@ transition: fade
 layout: center
 ---
 
-# 從 HTML 開始！
+# HTML 閱讀大賽
 
 ---
 layout: two-cols
 transition: slide-up
 ---
 
-<!-- 假設某間餐廳覺得薯餅加上漢堡，也就是澱粉加上澱粉，大家都喜歡吃，所以做了一個破網站推銷 -->
-
-<p class="!p-0 !mt-0 !mb-0">來看一個澱粉加澱粉網站的原始碼：</p>
+<p class="!p-0 !mt-0 !mb-0">來看一個網站的原始碼：</p>
 
 <div v-click="1">
 
@@ -174,9 +170,9 @@ transition: slide-up
 <p v-click="2" class="!mb-0">你會發現其實除了某些看不懂的魔⬈術⬊技⬈巧⬊之外，都還蠻直觀的：</p>
 <ul class="mt-2">
     <li v-click="3"><b><code>&lt;!DOCTYPE html&gt;</code>：</b>代表這是一個 HTML 文件</li>
-    <li v-click="4"><b><code>&lt;標籤&gt;...&lt;&#47;標籤&gt;</code>：</b>整份文件基本上都是標籤和內容組成</li>
+    <li v-click="4"><b><code>&lt;標籤&gt;...&lt;&#47;標籤&gt;</code>：</b>整份文件基本上都是標籤（元素）和內容組成</li>
     <li v-click="5"><b><code>&lt;body&gt;...&lt;&#47;body&gt;</code>：</b>包夾的是可見網頁的骨架</li>
-    <li v-click="6"><b><code>h1</code>~<code>h6</code>：</b>各種的標題，由大到小</li>
+    <li v-click="6"><b><code>h1</code>~<code>h6</code>：</b>各種的標題元素，由大到小</li>
     <li v-click="7"><b><code>p</code>：</b>請輸入文本</li>
 </ul>
 
@@ -196,9 +192,15 @@ transition: fade
 
 # 來看看其他網站的架構！
 
-<p class="text-center">像是 <a href="https://google.com/search?q=同建大中華" target="_blank">咕嚕咕嚕</a></p>
+<p class="text-center">
+    像是<a href="https://google.com/search?q=同建大中華" target="_blank">咕嚕咕嚕</a>，我們可以用開發者工具看他的程式碼
+</p>
 
-<p class="mt-8 text-center scale-200%" v-click="1"><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd></p>
+<p class="mt-40 text-center" v-click="1">
+    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
+    <br /><br />或是<br /><br />
+    <kbd>F12</kbd>
+</p>
 
 ---
 layout: center
@@ -215,5 +217,57 @@ transition: fade
 <img src="../images/2_ai_summary.png" class="w-full flex flex-column items-center rounded-md" />
 
 ---
+transition: slide-up
+---
 
-# 休息
+# 屬性
+
+在探索網站的時候，你會發現不只有標籤跟 1:1 的可見內容而已。
+
+<table>
+    <tbody>
+        <tr>
+            <th>原文（HTML）</th>
+            <th>繁體中文</th>
+        </tr>
+        <tr>
+            <td>
+
+```html
+<img src="https://github.com/tsoding.png" />
+```
+
+</td>
+          <td>
+
+一張圖片，網址是 `https://github.com/tsoding.png`。
+
+</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<ul class="mt-12">
+    <li v-click="1"><b><code>img</code>：</b>圖片元素標籤。</li>
+    <li v-click="2"><b><code>src="..."</code>：</b>代表元素具有這個<b>「屬性」</b>。</li>
+    <li v-click="3"><b><code>/></code>：</b>因為實際上照片裡不能再放其他元素或文字，可以直接關閉這個標籤</li>
+</ul>
+
+---
+layout: center
+class: bg-orange-50 dark:bg-black
+transition: slide-left
+---
+
+# 蒸蚌
+你現在能夠獨當一面閱讀一個網站的架構了！
+
+<img src="../images/2_goodjob.png" width="400" />
+
+---
+class: bg-orange-50 dark:bg-black
+transition: slide-left
+---
+
+<Next />

@@ -57,8 +57,8 @@ hide: false
 ---
 
 ---
-transition: slide-up
-level: 2
+src: ./pages/3-html.md
+hide: false
 ---
 
 # Navigation
