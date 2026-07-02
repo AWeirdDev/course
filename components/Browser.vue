@@ -37,8 +37,46 @@ const url = ref(props.url);
             </div>
         </div>
 
-        <div>
-            <slot />
+        <div class="frame-area relative">
+            <div class="absolute h-0.5 bg-blue loader"></div>
+            <div>
+                <slot />
+            </div>
         </div>
     </div>
 </template>
+
+<style>
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+        scale: 98%;
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 100%;
+        scale: 100%;
+        filter: blur(0px);
+    }
+}
+
+.frame-area {
+    animation: 250ms fade-in forwards;
+}
+
+@keyframes loader-in {
+    from {
+        opacity: 100%;
+        width: 12px;
+    }
+    to {
+        opacity: 0%;
+        width: 100%;
+    }
+}
+
+.loader {
+    animation: 500ms loader-in forwards;
+}
+</style>

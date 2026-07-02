@@ -16,7 +16,7 @@ class: bg-orange-50 dark:bg-black
     <ul>
         <li v-click="1">
             <b>興趣：</b>
-            浪費時間、研究系統架構（也就是浪費時間）
+            睡覺
         </li>
         <li v-click="2">
             <b>專長：</b>
@@ -26,6 +26,10 @@ class: bg-orange-50 dark:bg-black
         <li v-click="3">
             <b>學歷：</b>
             國中
+        </li>
+        <li v-click="3">
+            <b>GitHub：</b>
+            <a href="https://github.com/AWeirdDev" target="_blank">https://github.com/AWeirdDev</a>
         </li>
     </ul>
 </div>
