@@ -282,7 +282,7 @@ button {
 
 此時便只有「Click Me!」文字為紅色的。
 
-> **偽類 (Pseudo class; /su-doh klas/)**
+> **進階補充：偽類 (Pseudo class; /su-doh klas/)**
 > 
 > 偽類可以讓我們根據元素的**狀態變化**使用 CSS。
 > 例如，關於滑鼠停在元素上時：
