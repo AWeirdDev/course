@@ -16,7 +16,7 @@
 
 因此，在「前端」和「後端」的配合下，便能組織出各種線上服務或是應用程式供所有人使用。
 
-![whats_a_website.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/2a58f91f-bd63-4255-8402-9805e2030a84)
+![./images/whats_a_website.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/2a58f91f-bd63-4255-8402-9805e2030a84)
 
 ### 網頁組成
 
@@ -42,7 +42,7 @@
 
 在後續章節，我們會先從 HTML 開始說起，再提到如何將它們串接起來。
 
-![image.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/7d001ec7-6780-4f1e-9ffb-0d22bbb7d84f)
+![image.png](./images/project_structure.png)
 
 ## 1 - HTML
 
@@ -157,7 +157,7 @@
 
 若使用的是 Visual Studio Code，你可以開啟 Live Server。你可以看到：
 
-![image.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/c8d561b3-9a47-4199-8cf0-e0452fcc54d3)
+![image.png](./images/html_preview.png)
 
 這代表我們的 HTML 是正確無誤的。
 
@@ -165,7 +165,7 @@
 
 在這個實作欄，如果你願意跟隨，我們將做出一個**簡易的待辦清單**。這個欄位會在我們了解基本語法後出現，而你可以選擇完全跳過這一部分，試試看做出一個屬於自己的網站，或把這裡當作參考用程式碼。
 
-![class_todos.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/ffd42e4f-f244-4d30-b26c-7a30790683c5)
+![todos_banner.png](./images/todos_banner.png)
 
 要做出一個的待辦清單 App，首先需要的便是建立一個架構：
 
@@ -570,7 +570,7 @@ Hello, World
 window.alert("食飽未？");
 ```
 
-![image.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/4faf5465-239b-4c43-935f-d169370ecc86)
+![image.png](./images/alert.png)
 
 這會在頁面上跳出一個訊息。如果成功的話，代表我們有 JavaScript 了！
 
@@ -699,4 +699,3 @@ button.addEventListener("click", onClick);
 <input type="password" placeholder="輸入密碼..." />
 <button>送給 Sam Altman</button>
 ```
-
