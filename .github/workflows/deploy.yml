@@ -32,12 +32,16 @@ jobs:
         run: nci
 
       - name: Build
-        run: nr build --base /${{github.event.repository.name}}/
+        run: nr build --base # /${{github.event.repository.name}}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
         with:
           enablement: true
+
+      - name: Add CNAME
+        run: |
+          echo "club-class.aweird.me" >> dist/CNAME
 
       - uses: actions/upload-pages-artifact@v5
         with:
