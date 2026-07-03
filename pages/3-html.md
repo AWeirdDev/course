@@ -19,13 +19,13 @@ transition: slide-up
 class: bg-black/90 text-white/80
 layout: center
 transition: slide-up
+clicks: 1
 ---
 
 <div class="flex flex-col items-center">
 
-# 到底是不是程式語言？
-
-<img src="../images/3_all_in_his_mind.gif" class="rounded-md" width="320" />
+<h1 v-if="$clicks == 0">到底是不是程式語言？</h1>
+<img src="../images/3_all_in_his_mind.gif" class="rounded-md" width="320" v-if="$clicks == 1" />
 
 </div>
 
@@ -53,7 +53,7 @@ transition: fade
         <Browser
             class="browser w-full text-black"
             :key="$clicks == 4"
-            :url="$clicks == 4 ? 'https://google.com/search?q=cats' : 'https://google.com'">
+            :url="$clicks == 4 ? 'google.com/search?q=cats' : 'google.com'">
             <img src="../images/3_searched.png" v-if="$clicks == 4" />
             <img src="../images/3_google.png" v-else />
         </Browser>
@@ -234,7 +234,7 @@ transition: fade
 # 來看看別人網站的架構！
 
 <p class="text-center">
-    像是<a href="https://google.com/search?q=同建大中華" target="_blank">咕嚕咕嚕</a>，我們可以用開發者工具看他的程式碼
+    像是<a href="google.com/search?q=同建大中華" target="_blank">咕嚕咕嚕</a>，我們可以用開發者工具看他的程式碼
 </p>
 
 <p class="mt-40 text-center" v-click="1">
@@ -292,11 +292,17 @@ transition: slide-up
 transition: slide-up
 ---
 
-<div class="absolute inset-0 flex items-center justify-center p-40">
+<div class="absolute inset-0 flex items-center justify-center gap-8 p-20">
     <Browser class="w-full text-black" url="file:///C:/Users/user/Desktop/index.html">
         <div class="p-4">
-            <h1 class="font-[serif]">Clicker</h1>
-            <Button class="font-[serif]">Click me!</Button>
+            <h1 class="font-[serif] !m-0">Clicker</h1>
+            <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
+        </div>
+    </Browser>
+    <Browser class="w-full text-black" url="localhost:3000">
+        <div class="p-4">
+            <h1 class="font-[serif] !m-0">Clicker</h1>
+            <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
         </div>
     </Browser>
 </div>
@@ -306,7 +312,10 @@ layout: center
 transition: fade
 ---
 
-<img src="../images/2_css.png" width="120" />
+<div class="text-6xl flex flex-row items-center gap-4">
+    <span>來點</span>
+    <img src="../images/2_css.png" width="60" />
+</div>
 
 ---
 layout: center

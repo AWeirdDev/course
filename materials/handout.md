@@ -381,7 +381,7 @@ let c = 4 let d = 5
 //        ^^^ SyntaxError: Unexpected strict mode reserved word
 ```
 
-#### console.log(…)
+#### console.log(...)
 
 將結果顯示在終端機上，這和 Python 的 `print()` 很像：
 

@@ -62,10 +62,20 @@ hide: false
 ---
 
 ---
+src: ./pages/4-css.md
+hide: false
+---
+
+---
+src: ./pages/5-js.md
+hide: false
+---
+
+---
 layout: center
 class: text-center
 ---
 
 # 掰掰，掰掰
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+[我的 GitHub](https://github.com/AWeirdDev) · [開源](https://github.com/AWeirdDev/club-class)
