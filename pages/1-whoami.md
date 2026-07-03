@@ -16,20 +16,15 @@ class: bg-orange-50 dark:bg-black
     <ul>
         <li v-click="1">
             <b>興趣：</b>
-            睡覺
+            睡覺、網頁、系統架構
         </li>
         <li v-click="2">
             <b>專長：</b>
-            浪費時間、網頁、
-            初階系統語言（太菜了）
+            睡覺
         </li>
         <li v-click="3">
             <b>學歷：</b>
             國中
-        </li>
-        <li v-click="3">
-            <b>GitHub：</b>
-            <a href="https://github.com/AWeirdDev" target="_blank">https://github.com/AWeirdDev</a>
         </li>
     </ul>
 </div>

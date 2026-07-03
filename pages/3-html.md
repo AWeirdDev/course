@@ -18,6 +18,7 @@ transition: slide-up
 ---
 class: bg-black/90 text-white/80
 layout: center
+transition: slide-up
 ---
 
 <div class="flex flex-col items-center">
@@ -31,6 +32,7 @@ layout: center
 ---
 class: bg-black/90 text-white/80
 clicks: 4
+transition: fade
 ---
 
 <div class="text-center">
@@ -301,7 +303,7 @@ transition: slide-up
 
 ---
 layout: center
-transition: slide-up
+transition: fade
 ---
 
 <img src="../images/2_css.png" width="120" />
@@ -309,6 +311,7 @@ transition: slide-up
 ---
 layout: center
 transition: slide-left
+class: bg-black/90 text-white/80
 ---
 
 # 休息
