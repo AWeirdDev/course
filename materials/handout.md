@@ -16,7 +16,7 @@
 
 因此，在「前端」和「後端」的配合下，便能組織出各種線上服務或是應用程式供所有人使用。
 
-![./images/whats_a_website.png](https://resv2.craft.do/user/full/dae585b0-ef7f-e727-81be-1a3598969234/doc/0CFFFF98-C3E9-40C9-B50A-551E22831862/2a58f91f-bd63-4255-8402-9805e2030a84)
+![whats_a_website.png](./images/whats_a_website.png)
 
 ### 網頁組成
 
