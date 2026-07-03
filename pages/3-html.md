@@ -295,13 +295,13 @@ transition: slide-up
 <div class="absolute inset-0 flex items-center justify-center gap-8 p-20">
     <Browser class="w-full text-black" url="file:///C:/Users/user/Desktop/index.html">
         <div class="p-4">
-            <h1 class="font-[serif] !m-0">Clicker</h1>
+            <h1 class="font-[serif] !m-0 dark:text-white/80">Clicker</h1>
             <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
         </div>
     </Browser>
     <Browser class="w-full text-black" url="localhost:3000">
         <div class="p-4">
-            <h1 class="font-[serif] !m-0">Clicker</h1>
+            <h1 class="font-[serif] !m-0 dark:text-white/80">Clicker</h1>
             <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
         </div>
     </Browser>
