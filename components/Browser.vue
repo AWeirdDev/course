@@ -34,7 +34,7 @@ const url = ref(props.url);
             </div>
 
             <div
-                class="ml-4 w-full bg-gray-100 px-2 py-1 rounded-md flex flex-items items-center gap-2 dark:bg-transparent dark:text-white/60 dark:border dark:border-solid dark:border-white/10"
+                class="ml-4 w-full bg-gray-100 px-2 py-1 rounded-md flex flex-items items-center gap-2 dark:bg-transparent dark:text-white/60 dark:border dark:border-solid dark:border-white/20"
             >
                 <lucide-lock-keyhole class="text-[10px]" />
                 {{ url }}

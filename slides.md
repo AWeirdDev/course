@@ -73,6 +73,12 @@ hide: false
 
 ---
 layout: center
+---
+
+# 實作！
+
+---
+layout: center
 class: text-center
 ---
 

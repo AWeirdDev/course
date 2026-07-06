@@ -319,6 +319,12 @@ transition: fade
 
 ---
 layout: center
+---
+
+# 實作！
+
+---
+layout: center
 transition: slide-left
 class: bg-black/90 text-white/80
 ---

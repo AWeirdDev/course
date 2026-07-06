@@ -89,6 +89,38 @@ colorSchema: dark
     </pre>
 </div>
 
+<div class="absolute inset-0 flex items-center justify-center opacity-30%">
+    <img src="../images/5_c.webp" v-click="4" />
+</div>
+
+---
+class: bg-black/90 text-white/80
+transition: slide-up
+colorSchema: dark
+---
+
+# 跳訊息
+你們到底在躲什麼啦？我限動不是轉發很多你們拍的 "我超愛聖結石 聖結石我偶像 我Bang" 的影片嗎？躲屁啊 就跟過去那些年我的聖粉一樣，躲得非常好 躲到我差點以為你們真的都消失了 躲貓貓大師啊 生怕被我抓到啊？
+
+<div class="absolute inset-0 flex items-center justify-center opacity-30%">
+    <img src="../images/5_llvm.png" v-if="$clicks == 4" />
+</div>
+
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-4">
+    <pre class="text-4xl flex">
+        <span>window</span>
+        <span class="opacity-60%" v-click="1">.</span>
+        <span class="text-blue" v-click="1">alert</span>
+        <span class="opacity-60%" v-click="1">(</span>
+        <span class="text-orange" v-click="2">"我 BANG!"</span>
+        <span class="opacity-60%" v-click="3">)</span>
+        <span class="opacity-60%" v-click="4">;</span>
+    </pre>
+    <Button v-click="5" onclick="javascript:alert('我 BANG!')">按我！</Button>
+</div>
+
+
+
 ---
 transition: slide-up
 ---

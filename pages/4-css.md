@@ -190,8 +190,7 @@ transition: slide-up
 
 ---
 layout: center
-transition: slide-left
-class: bg-black/90 text-white/80
 ---
 
+# 實作！
 <Next />
