@@ -155,39 +155,6 @@
 
 這代表我們的 HTML 是正確無誤的。
 
-### 實作：做出架構
-
-在這個實作欄，如果你願意跟隨，我們將做出一個**簡易的待辦清單**。這個欄位會在我們了解基本語法後出現，而你可以選擇完全跳過這一部分，試試看做出一個屬於自己的網站，或把這裡當作參考用程式碼。
-
-![todos_banner.png](./images/todos_banner.png)
-
-要做出一個的待辦清單 App，首先需要的便是建立一個架構：
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>待辦清單 App</title>
-  </head>
-  <body>
-    <h1>代辦事項</h1>
-    
-    <input type="text" placeholder="要做什麼？" />
-    <button>新增</button>
-
-    <ul>
-      <!-- 清單內容 -->
-    </ul>
-  </body>
-</html>
-```
-
-- `<input type="text" />`：文字輸入
-- `<ul>`：無序清單
-
-你可以看看在瀏覽器上長什麼樣子。很顯然地，非常的醜，因此待會在了解 CSS 後，我們便可以美化它！
-
 ## 2 - CSS
 
 使用 CSS 可以讓網站變得美觀，只需要幾個步驟而已：
@@ -317,7 +284,7 @@ button {
 <!-- ...省略... -->
 <head>
   <!-- ...省略... -->
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <!-- ...省略... -->
 ```
@@ -325,10 +292,6 @@ button {
 ### 試試看：選擇並加入樣式
 
 回去看看你的 HTML，有哪些部分是你想要上樣式的？你可以參考附錄的常用 CSS 樣式，讓網頁變成你想要的樣子。
-
-### 實作：加點樣式
-
-[預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留]
 
 ## 3 - JavaScript
 
@@ -381,7 +344,7 @@ let c = 4 let d = 5
 
 ```javascript
 // 字串（string）
-const name = "Luke";
+const name = "CKEFGISC";
 
 // 數字（number）：整數或小數
 const cash = 0;
@@ -557,7 +520,7 @@ Hello, World
 <!-- ...省略... -->
 <body>
   <!-- ...省略... -->
-  <script type="text/javascript" src="/app.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 <!-- ...省略... -->
 ```
@@ -593,9 +556,139 @@ button.addEventListener("click", onClick);
 
 當你按下按鈕時，便會跳出訊息。當然，你可以做除了跳訊息之外的事，你可以看看實作欄在做些什麼。
 
-### 實作：讓它有用
 
-[預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留][預留]
+## 4 - 實作指導
+
+在這個實作欄，如果你願意跟隨，我們將做出一個**簡易的待辦清單**。這個欄位會在我們了解基本語法後出現，而你可以選擇完全跳過這一部分，試試看做出一個屬於自己的網站，或把這裡當作參考用程式碼。
+
+![todos_banner.png](./images/todos_banner.png)
+
+### 做出架構！
+
+要做出一個的待辦清單 App，首先需要的便是建立一個架構：
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>待辦清單 App</title>
+  </head>
+  <body>
+    <h1>待辦事項</h1>
+    
+    <input type="text" placeholder="要做什麼？" />
+    <button>新增</button>
+
+    <ul>
+      <!-- 清單內容 -->
+    </ul>
+  </body>
+</html>
+```
+
+- `<input type="text" />`：文字輸入
+- `<ul>`：無序清單
+- `<li>`：清單列，待會利用 JavaScript 放在 `<ul>` 
+
+你可以看看在瀏覽器上長什麼樣子。很顯然地，非常的醜，因此待會在了解 CSS 後，我們便可以美化它！
+
+### 加點樣式！
+
+老樣子，把 CSS 連結加到 `<head>`：
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+接著，加入 CSS：
+
+```css
+body {
+    /* 讓字體變得好看一點 */
+    font-family: sans-serif;
+
+    /* 內部元素文字置中 */
+    text-align: center;
+}
+
+input {
+    /* 輸入框內部留一點白 */
+    padding: 8px;
+
+    /* 設定字體大小 */
+    font-size: 16px;
+}
+
+button {
+    /* 內部留白：上下 左右  */
+    padding: 8px 16px;
+
+    font-size: 16px;
+
+    /* 滑鼠移到按鈕上換成小手指 */
+    cursor: pointer;
+}
+
+ul {
+    /* 把清單旁的「•」拿掉 */
+    list-style: none;
+
+    /* 內部不用留白 */
+    padding: 0;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+li {
+    /* 外部留白：上下 左右 */
+    margin: 8px 0;
+
+    /* 內部文字靠左 */
+    text-align: left;
+}
+```
+
+### 讓他有用！
+
+老樣子，把 JS 連結加到 `<body>`：
+
+```html
+<script type="text/javascript" src="app.js"></script>
+```
+
+接著，加入 JavaScript：
+
+```js
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+const list = document.querySelector("ul");
+
+function addTodo() {
+    // 如果輸入框是空的，不做任何事
+    if (input.value === "") {
+        return;
+    }
+
+    // 建立一個新的 <li> 元素
+    const item = document.createElement("li");
+
+    // 設定文字內容
+    item.textContent = input.value;
+
+    // 把新的 <li> 加進 <ul> 裡
+    list.appendChild(item);
+
+    // 清空輸入框，方便繼續輸入下一項
+    input.value = "";
+}
+
+button.addEventListener("click", addTodo);
+```
+
+### 完成！
+
+![todos_app.jpeg](./images/todos_app.jpeg)
 
 ## 5 - 附錄
 
@@ -698,4 +791,113 @@ button.addEventListener("click", onClick);
 <input type="text" placeholder="輸入名字..." />
 <input type="password" placeholder="輸入密碼..." />
 <button>送給 Sam Altman</button>
+```
+
+### 常用的 CSS 屬性
+
+以下整理適合初學者(今天只學過選擇器和 `color`/`text-align` 等基礎)在待辦清單或個人網站上會用到的常用屬性,依用途分類:
+
+#### 文字相關
+
+```css
+color: #333;              /* 文字顏色 */
+font-size: 16px;          /* 文字大小 */
+font-family: sans-serif;  /* 字體 */
+font-weight: bold;        /* 粗體 */
+text-align: center;       /* 文字對齊 (left/center/right) */
+```
+
+#### 背景與邊框
+
+```css
+background-color: #f5f5f5;  /* 背景顏色，可以是名稱、hex 等 */
+border: 1px solid #ccc;     /* 邊框 (粗細/實線虛線/顏色) */
+border-radius: 8px;         /* 圓角 */
+```
+
+#### 間距
+
+```css
+padding: 10px;    /* 內距（外部留白）：元素內容跟邊框之間的空間 */
+margin: 10px;     /* 外距（內部留白）：元素跟其他元素之間的空間 */
+```
+
+`padding` 是「往內擠」，`margin` 是「往外推」。
+
+#### 尺寸
+
+```css
+width: 300px;      /* 寬度 */
+height: 100px;     /* 高度 */
+max-width: 300px;  /* 最大寬度，常用在讓元素不要無限延伸 */
+```
+
+#### 顯示與排版
+
+```css
+display: none;     /* 隱藏元素 (常用在「刪除」功能，先隱藏再真的移除) */
+cursor: pointer;   /* 滑鼠移到上面變成手指 (常用在按鈕) */
+list-style: none;  /* 清單去掉預設的點點符號 */
+```
+
+#### 其他
+
+```css
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* 陰影，讓元素有立體感 */
+transition: all 0.3s ease;              /* 動畫過渡，讓變化更滑順 */
+```
+
+### 常用的 JavaScript 操作
+以下整理今天教材程度適合、且待辦清單等成發常會用到的 DOM 操作,依用途分類:
+
+#### 選取元素
+
+```js
+document.querySelector("button");        // 選第一個符合的元素
+document.querySelectorAll("li");         // 選所有符合的元素 (回傳一個特殊節點清單)
+document.getElementById("myId");         // 用 id 選取
+```
+
+#### 建立、插入與刪除元素
+
+```js
+const item = document.createElement("li");   // 建立一個新元素
+list.appendChild(item);                      // 加到某個元素的最後面
+
+list.removeChild(item);   // 從 list 中移除 item 元素
+item.remove();            // 直接移除 item 元素
+```
+
+#### 讀取與修改內容
+
+```js
+element.textContent = "hey";        // 修改純文字內容
+element.innerHTML = "<b>boo</b>";   // 直接修改 HTML 內容，非常不建議
+input.value                         // 取得輸入框的值
+input.value = "";                   // 設定輸入框內容文字
+```
+
+#### 修改樣式與屬性
+
+```js
+// 操作 CSS 屬性
+element.style.color = "red";              // 直接改一個樣式
+element.style.backgroundColor = "blue";   // 改背景色 (注意駝峰式命名，沒有「-」)
+
+element.classList.add("myclass");            // 加入一個 class
+element.classList.remove("myclass");         // 移除一個 class
+element.classList.toggle("myclass");         // 有就移除，沒有就加上 (切換用)
+```
+
+#### 事件監聽
+
+```js
+button.addEventListener("click", 函式名稱);   // 點擊事件
+input.addEventListener("keydown", 函式名稱);  // 按下鍵盤按鍵 (例如按 Enter 新增)
+```
+
+#### 判斷與迴圈
+```js
+if (input.value === "") { return; }   // 空值檢查
+for (const el of elements) { ... }    // 走訪所有選到的元素，搭配 querySelectorAll
 ```

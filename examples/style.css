@@ -1,0 +1,43 @@
+body {
+    /* 讓字體變得好看一點 */
+    font-family: sans-serif;
+
+    /* 內部元素文字置中 */
+    text-align: center;
+}
+
+input {
+    /* 輸入框內部留一點白 */
+    padding: 8px;
+
+    /* 設定字體大小 */
+    font-size: 16px;
+}
+
+button {
+    /* 內部留白：上下 左右  */
+    padding: 8px 16px;
+
+    font-size: 16px;
+
+    /* 滑鼠移到按鈕上換成小手指 */
+    cursor: pointer;
+}
+
+ul {
+    /* 把清單旁的「•」拿掉 */
+    list-style: none;
+
+    /* 內部不用留白 */
+    padding: 0;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+li {
+    /* 外部留白：上下 左右 */
+    margin: 8px 0;
+
+    /* 內部文字靠左 */
+    text-align: left;
+}

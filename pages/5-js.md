@@ -363,7 +363,7 @@ transition: slide-up
 
 <body>
   <!-- ... -->
-  <script type="text/javascript" src="/app.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 <!-- ... -->

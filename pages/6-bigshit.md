@@ -8,8 +8,6 @@ layout: two-cols
 - CSS：把這些變得漂亮一點
 - JavaScript：監聽按鈕、**創造元素？**、⋯⋯
 
-<br />
-
 ```js
 // 取得輸入框內容
 const input = document.querySelector("input");
@@ -26,6 +24,8 @@ ul.appendChild(li);
 // 清空輸入框
 input.value = "";
 ```
+
+如果你很強的話，可以試試看加入勾選框 `<input type="checkbox" />`。
 
 ::right::
 
