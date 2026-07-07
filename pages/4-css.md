@@ -189,8 +189,27 @@ transition: slide-up
 </div>
 
 ---
+transition: slide-up
+---
+
+<div class="absolute inset-0 flex items-center justify-center p-20">
+    <Browser class="w-120 text-black" url="localhost:3000">
+        <div class="p-4">
+            <h1 class="font-[serif] !m-0 text-red text-center">我的網站</h1>
+            <img src="../images/3_nl.jpg" class="animate-spin"  width="240" />
+        </div>
+    </Browser>
+</div>
+
+---
 layout: center
+transition: fade
 ---
 
 # 實作！
+1. 用元素選擇器把所有 `body` 的文字顏色、背景顏色改掉
+2. 幫一些元素加入 `class="..."` 定義類別，用類別選擇顏色或大小
+3. 一個元素想要有多個 class 怎麼辦？
+4. 怎麼用選擇器指定多個 class 條件？
+
 <Next />

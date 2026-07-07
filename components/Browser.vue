@@ -43,7 +43,7 @@ const url = ref(props.url);
 
         <div class="frame-area relative">
             <div class="absolute h-0.5 bg-blue loader"></div>
-            <div>
+            <div class="overflow-hidden">
                 <slot />
             </div>
         </div>

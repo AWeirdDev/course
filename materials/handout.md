@@ -1,7 +1,7 @@
 # 講義
 
-- 課程簡報：
-- 課程簡報原始碼：[https://github.com/AWeirdDev/club-class](https://github.com/AWeirdDev/club-class)
+- 課程簡報：[https://course.aweird.me](https://course.aweird.meAWeirdDev/course)
+- 課程簡報原始碼：[https://github.com/AWeirdDev/course](https://github.com/AWeirdDev/course)
 
 ## 0 - 網頁概述
 

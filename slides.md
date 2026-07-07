@@ -23,7 +23,7 @@ class: bg-orange-50 dark:bg-black
 
 <div class="abs-bl m-14 text-xs">
   <a 
-      href="https://github.com/AWeirdDev/club-class"
+      href="https://github.com/AWeirdDev/course"
       target="_blank"
       class="!border-none !opacity-50 !hover:brightness-50 !hover:text-white
              flex flex-row items-center gap-1
@@ -72,10 +72,9 @@ hide: false
 ---
 
 ---
-layout: center
+src: ./pages/6-bigshit.md
+hide: false
 ---
-
-# 實作！
 
 ---
 layout: center
@@ -84,4 +83,4 @@ class: text-center
 
 # 掰掰，掰掰
 
-[我的 GitHub](https://github.com/AWeirdDev) · [開源](https://github.com/AWeirdDev/club-class)
+[GitHub](https://github.com/AWeirdDev) · [開源](https://github.com/AWeirdDev/course)

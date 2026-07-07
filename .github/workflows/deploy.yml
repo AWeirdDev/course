@@ -46,7 +46,7 @@ jobs:
 
       - name: Add CNAME
         run: |
-          echo "club-class.aweird.me" >> dist/CNAME
+          echo "course.aweird.me" >> dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

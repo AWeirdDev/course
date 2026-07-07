@@ -194,35 +194,35 @@ transition: slide-up
 
 <div v-click="1">
 
-```html [index.html] {all|all|all|1|3-8|3,8|4|5-7}
+```html [index.html] {all|all|1|3-7|4|5|6}
 <!DOCTYPE html>
 <html>
     <body>
         <h1>薯餅漢堡</h1>
-        <p>
-            鼠來寶今年樣樣好
-        </p>
+        <p>鼠來寶今年樣樣好</p>
+        <img src="image.jpg" />
     </body>
 </html>
 ```
 
 </div>
 
-<p v-click="2" class="!mb-0">你會發現其實除了某些看不懂的魔術技巧之外：</p>
+<p v-click="1" class="!mb-0">你會發現其實除了某些看不懂的魔術技巧之外：</p>
 <ul class="mt-2">
-    <li v-click="3"><b><code>&lt;!DOCTYPE html&gt;</code>：</b>代表這是一個 HTML 文件</li>
-    <li v-click="4"><b><code>&lt;標籤&gt;...&lt;&#47;標籤&gt;</code>：</b>整份文件基本上都是標籤（元素）和內容組成</li>
-    <li v-click="5"><b><code>&lt;body&gt;...&lt;&#47;body&gt;</code>：</b>包夾的是可見網頁的骨架</li>
-    <li v-click="6"><b><code>h1</code>~<code>h6</code>：</b>各種的標題元素，由大到小</li>
-    <li v-click="7"><b><code>p</code>：</b>請輸入文本</li>
+    <li v-click="2"><b><code>&lt;!DOCTYPE html&gt;</code>：</b>代表這是一個 HTML 文件</li>
+    <li v-click="3"><b><code>&lt;body&gt;...&lt;&#47;body&gt;</code>：</b>包夾的是可見網頁的骨架</li>
+    <li v-click="4"><b><code>h1</code>~<code>h6</code>：</b>各種的標題元素，由大到小</li>
+    <li v-click="5"><b><code>p</code>：</b>請輸入文本</li>
+    <li v-click="6"><b><code>img</code>：</b>利用 <code>img</code> 標籤 + <code>src</code> 屬性放圖片連結</li>
 </ul>
 
 ::right::
 
-<div class="ml-8 mt-9" v-click="1" :style="{ transition: 'all 200ms ease', opacity: $clicks == 3 ? 0.4 : 1 }">
+<div class="ml-8 mt-9" v-click="1" :style="{ transition: 'all 200ms ease', opacity: $clicks == 2 ? 0.4 : 1 }">
 
-<h1 class="font-bold !text-6xl" :style="{ transition: 'all 200ms ease', opacity: $clicks > 6 ? 0.4 : 1 }">薯餅漢堡</h1>
-<p :style="{ transition: 'all 200ms ease', opacity: $clicks >= 6 && $clicks != 7 ? 0.4 : 1 }">鼠來寶今年樣樣好</p>
+<h1 class="font-bold !text-6xl" :style="{ transition: 'all 200ms ease', opacity: $clicks > 4 ? 0.4 : 1 }">薯餅漢堡</h1>
+<p :style="{ transition: 'all 200ms ease', opacity: $clicks >= 4 && $clicks != 5 ? 0.4 : 1 }">鼠來寶今年樣樣好</p>
+<img src="../images/3_img.jpg" width="320" :style="{ transition: 'all 200ms ease', opacity: $clicks >= 4 && $clicks != 6 ? 0.4 : 1 }" />
 
 </div>
 
@@ -292,17 +292,11 @@ transition: slide-up
 transition: slide-up
 ---
 
-<div class="absolute inset-0 flex items-center justify-center gap-8 p-20">
-    <Browser class="w-full text-black" url="file:///C:/Users/user/Desktop/index.html">
+<div class="absolute inset-0 flex items-center justify-center p-20">
+    <Browser class="w-120 text-black" url="localhost:3000">
         <div class="p-4">
-            <h1 class="font-[serif] !m-0 dark:text-white/80">Clicker</h1>
-            <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
-        </div>
-    </Browser>
-    <Browser class="w-full text-black" url="localhost:3000">
-        <div class="p-4">
-            <h1 class="font-[serif] !m-0 dark:text-white/80">Clicker</h1>
-            <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Click Me!</Button>
+            <h1 class="font-[serif] !m-0 dark:text-white/80">我的網站</h1>
+            <img src="../images/3_nl.jpg" width="240" />
         </div>
     </Browser>
 </div>
@@ -314,6 +308,12 @@ transition: fade
 
 # 實作！
 
+1. 用 `h1` ~ `h3` 下幾個<s>台灣媒體</s>標題
+2. 用多個 `p` 元素寫你怎麼跟外星人溝通
+3. 放幾張照片，試試看 `<img>`
+4. 用一個 `div` 包住這些內容（巢狀結構）
+5. 用開發者工具偷看別人網站都藏些什麼
+
 ---
 layout: center
 transition: fade
@@ -322,6 +322,7 @@ transition: fade
 <div class="text-6xl flex flex-row items-center gap-4">
     <span>來點</span>
     <img src="../images/2_css.png" width="60" />
+    <span>？</span>
 </div>
 
 ---

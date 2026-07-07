@@ -332,7 +332,7 @@ button.addEventListener("click", onClick);
         <div class="abs-br m-14">
             <h1 v-if="$clicks == 1">選取第一個按鈕元素</h1>
             <h1 v-if="$clicks == 2">寫一個函式處理點擊事件</h1>
-            <h1 v-if="$clicks == 3">註冊這個事件</h1>
+            <h1 v-if="$clicks == 3">監聽這個事件</h1>
         </div>
     </div>
     <div v-if="$clicks == 4">
@@ -370,3 +370,16 @@ transition: slide-up
 ```
 
 </div>
+
+---
+layout: center
+transition: slide-up
+---
+
+# 實作！
+
+1. 試試看 `let` 和 `const`
+2. 用 `console.log` 或 `window.alert()` 顯示一些詭異的變數
+3. 用 `document.querySelector("...")` 選擇一顆按鈕或任何元素
+4. 監聽 `click` 事件然後做一些詭異的事
+5. 試試看 `document.querySelector("...")` 回傳的值還可以做些什麼
