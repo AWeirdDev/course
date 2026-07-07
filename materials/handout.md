@@ -73,13 +73,9 @@
 
 輸入完名稱和需要的屬性後，輸入 `>` 完成一個開啟的標籤。
 
-2. **輸入內容：**
+2. **輸入內容：**在剛輸入的 `>` 後可以輸入任何文字，或是放入更多元素。
 
-在剛輸入的 `>` 後可以輸入任何文字，或是放入更多元素。
-
-3. **閉合標籤：**
-
-標籤需要透過 `</標籤>` 或是 `/>` 閉合才能完整。
+3. **閉合標籤：**標籤需要透過 `</標籤>` 或是 `/>` 閉合才能完整。
 
 但**置空元素**例外，例如： `<br>`（換行）、`<hr>`（分隔線）、`<img>`（照片）、`<input>`（輸入）、`<link>`、`<meta>` 。由於在它們裡頭加入其他元素沒有意義，因此不需要閉合標籤。
 
@@ -381,17 +377,6 @@ let c = 4 let d = 5
 //        ^^^ SyntaxError: Unexpected strict mode reserved word
 ```
 
-#### console.log(...)
-
-將結果顯示在終端機上，這和 Python 的 `print()` 很像：
-
-```javascript
-console.log("Hello, World!", 123);
-
-// 結果：
-// Hello, World! 123
-```
-
 #### 資料型別（Data types）
 
 ```javascript
@@ -412,7 +397,7 @@ const shoppingList = ["Milk", "Milk carton"];
 
 // 物件（object）
 const scores = { "charlie": 80, "walter": 99.1 };
-//                           ^ 逗號隔開
+//                            ^ 逗號隔開
 ```
 
 > **進階補充：有沒有代表「空」的資料型別？**
@@ -433,6 +418,17 @@ const scores = { "charlie": 80, "walter": 99.1 };
 > 
 > 其實說來說去 `null` 沒有自己的型別純屬是一個 bug，但後來他們也沒有要修。
 > 所以我才說這是世界上最人性化的語言。
+
+#### console.log(...)
+
+將結果顯示在終端機上，這和 Python 的 `print()` 很像：
+
+```javascript
+console.log("Hello, World!", 123);
+
+// 結果：
+// Hello, World! 123
+```
 
 #### 運算子（Operators）
 
@@ -498,15 +494,20 @@ if (recipe == "高麗菜煮蛋") {
 
 #### 迴圈（Loops）
 
-JavaScript 迴圈的語法和 C/C++ 非常相像，只差在 `let i = 0` 宣告不需要提到型別。
+JavaScript `for` 迴圈的語法和 C/C++ 非常相像，只差在 `let i = 0` 宣告不需要提到型別。此外，JavaScript 也有提供常見的 `while` 迴圈。
 
 ```javascript
-// 輸出 3 次
 const times = 3;
 
 console.log("來杯好茶");
 for (let i = 0; i < times; i++) {
   console.log("搖一搖");
+}
+
+let mangoJump = 7;
+while (mangoJump > 0) {
+    console.log("我喜歡你");
+    mangoJump--;
 }
 ```
 

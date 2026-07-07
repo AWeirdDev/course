@@ -312,16 +312,17 @@ layout: center
 transition: fade
 ---
 
+# 實作！
+
+---
+layout: center
+transition: fade
+---
+
 <div class="text-6xl flex flex-row items-center gap-4">
     <span>來點</span>
     <img src="../images/2_css.png" width="60" />
 </div>
-
----
-layout: center
----
-
-# 實作！
 
 ---
 layout: center

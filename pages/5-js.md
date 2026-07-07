@@ -102,7 +102,7 @@ colorSchema: dark
 # 跳訊息
 你們到底在躲什麼啦？我限動不是轉發很多你們拍的 "我超愛聖結石 聖結石我偶像 我Bang" 的影片嗎？躲屁啊 就跟過去那些年我的聖粉一樣，躲得非常好 躲到我差點以為你們真的都消失了 躲貓貓大師啊 生怕被我抓到啊？
 
-<div class="absolute inset-0 flex items-center justify-center opacity-30%">
+<div class="absolute inset-0 flex items-center justify-center opacity-5%">
     <img src="../images/5_llvm.png" v-if="$clicks == 4" />
 </div>
 
@@ -123,9 +123,23 @@ colorSchema: dark
 
 ---
 transition: slide-up
+monacoRunUseStrict: false
 ---
 
-# 試試看
+<div class="flex flex-row items-center gap-4 mb-10">
+    <Tab label="宣告" clicks="0" />
+    <Tab label="資料型別" clicks="1" />
+    <Tab label="console" clicks="2" />
+    <Tab label="運算子" clicks="3" />
+    <Tab label="選擇結構" clicks="4" />
+    <Tab label="for" clicks="5" />
+    <Tab label="while" clicks="6" />
+    <Tab label="函式" clicks="7" />
+</div>
+
+
+<v-switch>
+<template #0>
 
 ```js {monaco-run}{autorun:false}
 let pizza = 0;
@@ -143,6 +157,122 @@ zero = zero + 1;
 //   ^ TypeError: Assignment to constant variable.
 ```
 
+</template>
+
+<template #1>
+
+```js
+let str = "CKEFGISC";
+str = "Hello " + str;
+str // "Hello CKEFGISC"
+
+let pie = -3.1469420;
+pie -= 100;
+pie // -103.146942
+
+const yes = true;
+const naw = false;
+
+const list = ["a", "b"];
+list.push("o");
+list.length // 3
+list        // ["a", "b", "o"]
+
+const scores = { "charlie": 80, "walter": 99.1 };
+scores.charlie     // 80
+scores["walter"]   // 99.1
+```
+
+</template>
+
+<template #2>
+
+```js {monaco-run}{autorun:false}
+const name = "you";
+const cash = 1000;
+
+console.log(name, "owe me", cash);
+```
+
+<a href="about:blank" target="_blank">about:blank</a>
+
+</template>
+
+<template #3>
+
+```js {monaco-run}{autorun:false}
+const name = "Charles";
+console.log(name == "Charles");
+
+let cash = 0;
+cash += 100;
+console.log(!(cash >= 100));
+
+const a = 100;
+console.log(a ==  "100");  // ?
+console.log(a === "100");  // ?
+```
+
+</template>
+
+<template #4>
+
+```js {monaco-run}{autorun:false}
+const recipe = "可樂加玉米濃湯";
+
+if (recipe == "高麗菜煮蛋") {
+  console.log("坐你那一桌");
+} else if (recipe == "可樂加玉米濃湯") {
+  console.log("去坐高麗菜煮蛋那桌");
+} else {
+  console.log("好吃！");
+}
+```
+
+</template>
+
+<template #5>
+
+```js {monaco-run}{autorun:false}
+// 輸出 3 次
+const times = 3;
+
+console.log("來杯好茶");
+for (let i = 0; i < times; i++) {
+  console.log("搖一搖");
+}
+```
+
+</template>
+
+<template #6>
+
+```js {monaco-run}{autorun:false}
+let mangoJump = 7;
+
+while (mangoJump > 0) {
+    console.log("我喜歡你");
+    mangoJump--;
+}
+```
+
+</template>
+
+<template #7>
+
+```js {monaco-run}{autorun:false}
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(6 * 9, 6 + 9));
+console.log(add("Hello ", "World"));
+```
+
+</template>
+
+</v-switch>
+
 ---
 layout: center
 transition: slide-up
@@ -158,8 +288,8 @@ transition: slide-up
 `index.html`
 
 ```html
-<button>Wow!</button>
-<button>Wie!</button>
+<button>Wowie</button>
+<button>Zowie</button>
 ```
 
 <br />
@@ -184,8 +314,8 @@ button.addEventListener("click", onClick);
     <div v-if="$clicks == 0">
         <Browser url="localhost:3000">
             <div class="p-2">
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Wow!</Button>
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Wie!</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Wowie</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Zowie</Button>
             </div>
         </Browser>
         <div class="abs-br m-14">
@@ -195,8 +325,8 @@ button.addEventListener("click", onClick);
     <div v-if="$clicks > 0 && $clicks < 4">
         <Browser url="localhost:3000">
             <div class="p-2">
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default ring-2">Wow!</Button>
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default opacity-30%">Wie!</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default ring-2">Wowie</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default opacity-30%">Zowie</Button>
             </div>
         </Browser>
         <div class="abs-br m-14">
@@ -208,8 +338,8 @@ button.addEventListener("click", onClick);
     <div v-if="$clicks == 4">
         <Browser url="localhost:3000">
             <div class="p-2">
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default" onclick="alert('我BANG！')">Wow!</Button>
-                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Wie!</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default" onclick="alert('我BANG！')">Wowie</Button>
+                <Button class="font-[serif] bg-gray-200 !p-0.5 !py-0 text-xs !rounded-sm !cursor-default">Zowie</Button>
             </div>
         </Browser>
         <div class="abs-br m-14">
@@ -223,7 +353,7 @@ layout: center
 transition: slide-up
 ---
 
-# 又又又又又寫一個網站
+# 代入消去法
 在本地創建一個 `app.js` 檔案，然後嵌入 `index.html`：
 
 <div class="text-left">

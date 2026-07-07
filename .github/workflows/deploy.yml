@@ -31,17 +31,27 @@ jobs:
       - name: Install dependencies
         run: nci
 
-      - name: Build
+      - name: Build slides
         run: nr build
+
+      - name: Install markdown-to-html
+        run: npm i -g markdown-to-html-cli
+
+      - name: Copy contents of materials
+        run: cp -r materials/* dist
+
+      - name: Transform markdown
+        run: |
+          markdown-to-html --source dist/handout.md --output dist/handout.html
+
+      - name: Add CNAME
+        run: |
+          echo "club-class.aweird.me" >> dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
         with:
           enablement: true
-
-      - name: Add CNAME
-        run: |
-          echo "club-class.aweird.me" >> dist/CNAME
 
       - uses: actions/upload-pages-artifact@v5
         with:
