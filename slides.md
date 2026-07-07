@@ -82,5 +82,6 @@ class: text-center
 ---
 
 # 掰掰，掰掰
+去唱歌
 
 [GitHub](https://github.com/AWeirdDev) · [開源](https://github.com/AWeirdDev/course)
