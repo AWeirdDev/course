@@ -132,7 +132,7 @@ transition: slide-up
 <div class="absolute inset-0 flex flex-col items-center justify-center mt-60">
     <v-switch class="text-center">
       <template #0>
-          <div class="opacity-60%">Parser</div>
+          <div class="opacity-0%">69420</div>
           <div class="text-6xl">開始</div>
       </template>
       <template #1>
@@ -249,13 +249,6 @@ transition: slide-up
 ---
 
 <img src="../images/3_web_inspector.png" class="w-full flex flex-column items-center rounded-md" />
-
----
-layout: center
-transition: slide-up
----
-
-<img src="../images/3_ai_summary.png" class="flex flex-column items-center rounded-md border border-solid" width="400" />
 
 ---
 layout: center

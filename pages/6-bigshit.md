@@ -1,5 +1,6 @@
 ---
 layout: two-cols
+transition: fade
 ---
 
 # 大實作：待辦事項

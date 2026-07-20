@@ -22,7 +22,6 @@ clicks: 1
 
 <div class="flex flex-col items-center">
 
-
 <h1 v-if="$clicks == 0">到底是不是程式語言？</h1>
 <h1 v-if="$clicks == 1">你可以用 CSS 做出 x86_16 CPU</h1>
 
@@ -68,6 +67,48 @@ transition: slide-up
           <div class="text-6xl">屬性: 值;</div>
       </template>
     </v-switch>
+</div>
+
+---
+layout: two-cols
+transition: slide-up
+---
+
+<div class="pr-4">
+
+# `.class`
+
+```html
+<div class="a b c">
+    hello
+</div>
+```
+
+<br />
+
+- 屬於 `a` 類別：`.a`
+- 屬於 `a` 和 `b` 類別：`.a.b`
+- 是 `<div>` 元素，也是 `a` 類別：`div.a`
+
+</div>
+
+::right::
+
+<div class="pl-4">
+
+# `#id`
+
+```html
+<div id="include">
+    <stdio class="h"></stdio>
+</div>
+```
+
+<br />
+
+- ID 是 `include`：`#include`
+- 母元素的 ID 是 `include`，裡面是 `<stdio>` 元素，類別是 `h`：`#include stdio.h`
+
 </div>
 
 ---
