@@ -1,6 +1,6 @@
 # 講義
 
-- 課程簡報：[https://course.aweird.me](https://course.aweird.meAWeirdDev/course)
+- 課程簡報：[https://course.aweird.me](https://course.aweird.me)
 - 課程簡報原始碼：[https://github.com/AWeirdDev/course](https://github.com/AWeirdDev/course)
 
 ## 0 - 網頁概述
@@ -29,7 +29,7 @@
 由於這三種語言從網頁誕生之初就扮演著關鍵角色，因此也被合稱為「網頁三兄弟」。
 
 > **開發者工具**
-> 
+>
 > 在瀏覽器中按下 `F12` 或是`Ctrl` + `Shift` + `I` ，可以打開用來開發者工具（Developer Tools）。對於一個網頁開發者來說，可以作為測試、分析、嘗試，以及讓別人相信你學期成績滿分的工具。
 
 ### 網站檔案架構
@@ -45,6 +45,11 @@
 ![image.png](./images/project_structure.png)
 
 ## 1 - HTML
+
+**Hyper** Text **Markup** Language（超文本標記語言），其中：
+
+- **Hyper**：超越的意思，所以超文本就是「可以互相連結、跳轉」的文本
+- **Markup**：標記的意思，表示的是它的標記能力
 
 作為網頁的骨架，HTML 能夠直觀地表達一個網頁的內容，基本上都是**元素**組成：
 
@@ -80,21 +85,21 @@
 但**置空元素**例外，例如： `<br>`（換行）、`<hr>`（分隔線）、`<img>`（照片）、`<input>`（輸入）、`<link>`、`<meta>` 。由於在它們裡頭加入其他元素沒有意義，因此不需要閉合標籤。
 
 > **進階補充：置空元素（Void Element）**
-> 
+>
 > 不能包有有任何元素或文字的元素。
 > 在 HTML，給置空元素使用閉合標籤是無效的。例如：`<input type="text"></input>` 就是無效的 HTML。現代的瀏覽器通常會直接略過不管，不影響整體網頁的顯示。
 > 有效的置空元素表示方式：
-> 
+>
 > ```html
 > <!-- 有效 -->
 > <置空元素 abc="123" xyz />
-> 
+>
 > <!-- 有效 -->
 > <置空元素 abc="123" xyz>
 > ```
-> 
+>
 > HTML 的置空元素列表如下：`<area>`、`<base>`、`<br>`、`<col>`、`<embed>`、`<hr>`、`<img>`、`<input>`、`<link>`、`<meta>`、`<param>`、`<source>`、`<track>`、`<wbr>`。
-> 
+>
 > 值得注意的是，可以嵌入 JavaScript 的元素 `<script>` 並不屬於置空元素，後面一定要有 `</script>`，因為裡頭包夾文字是有意義的，可以用來讀取或是執行。不這麼做的話瀏覽器會不理你。
 
 ### 基礎：巢狀結構（Nesting）
@@ -134,16 +139,16 @@
 
 - `<!DOCTYPE html>`：代表這是一份 HTML 文件。
 - `<head>...</head>` ：關於這個網頁的資訊（網頁上不顯示）
-   - `<meta charset="UTF-8" />` 設定文件編碼，建議 UTF-8
-   - `<title>...</title>` ：設定網站標籤頁標題
+  - `<meta charset="UTF-8" />` 設定文件編碼，建議 UTF-8
+  - `<title>...</title>` ：設定網站標籤頁標題
 - `<body>...</body>`：包夾的是可見網頁的骨架
-   - `<h1>` ～ `<h6>`：由大到小的標題
-   - `<p>`：段落文字
-   - `button`：一顆按鈕
+  - `<h1>` ～ `<h6>`：由大到小的標題
+  - `<p>`：段落文字
+  - `button`：一顆按鈕
 
 > **更多實用的 HTML 標籤：**
-> 
-> 在附錄我們有提供常用的 HTML 標籤供你參考！
+>
+> 附錄有提供常用的 HTML 標籤給你參考！
 
 接著，在瀏覽器輸入 `file:///`，並貼上你 HTML 檔案的完整路由，像是：
 
@@ -191,8 +196,9 @@
 - **複合型**：結合上述各種選擇器，將目標更加明確化
 
 > **類別和 ID**
-> 
+>
 > 「類別」和「ID」都在 HTML 上的屬性可以設定。
+>
 > - **類別：**幫元素分類，例如藍色按鈕可以是：`class="blue-btn"`
 > - **ID：**整個網頁上唯一，例如：`id="home"`
 
@@ -246,30 +252,30 @@ button {
 此時便只有「Click Me!」文字為紅色的。
 
 > **進階補充：偽類 (Pseudo class; /su-doh klas/)**
-> 
+>
 > 偽類可以讓我們根據元素的**狀態變化**使用 CSS。
 > 例如，關於滑鼠停在元素上時：
-> 
+>
 > ```css
 > /* 預設狀態 */
 > button {
 >   color: black;
 > }
-> 
+>
 > /* 滑鼠移到按鈕上 */
 > button:hover {
 >   color: red;
 > }
 > ```
-> 
+>
 > 一個連結（`<a>`）也有特殊的用法。例如，`:link` 可以調整使用者還未瀏覽過的連結樣式，而 `:visited` 則可以改變使用者已瀏覽過的連結樣式。
-> 
+>
 > ```css
 > /* 未瀏覽 */
 > a:link {
 >   color: blue;
 > }
-> 
+>
 > /* 已瀏覽 */
 > a:visited {
 >   color: red;
@@ -284,7 +290,7 @@ button {
 <!-- ...省略... -->
 <head>
   <!-- ...省略... -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <!-- ...省略... -->
 ```
@@ -348,7 +354,7 @@ const name = "CKEFGISC";
 
 // 數字（number）：整數或小數
 const cash = 0;
-const pie = -3.1469420;
+const pie = -3.146942;
 
 // 布林值（boolean)：true 或 false
 const forReal = true;
@@ -359,26 +365,26 @@ const shoppingList = ["Milk", "Milk carton"];
 //                          ^ 逗號隔開
 
 // 物件（object）
-const scores = { "charlie": 80, "walter": 99.1 };
+const scores = { charlie: 80, walter: 99.1 };
 //                            ^ 逗號隔開
 ```
 
 > **進階補充：有沒有代表「空」的資料型別？**
-> 
+>
 > 如果你非常的 smart，你可能會用未定義（`undefined`）：
-> 
+>
 > ```javascript
 > const plan = undefined;
 > ```
-> 
+>
 > 未定義是值也是一種資料型態。但如其名，意思就是沒有定義，和一般「空」的概念有所落差。如果你要真正的「空」，你可以使用 `null`：
-> 
+>
 > ```javascript
 > const data = null;
 > ```
-> 
+>
 > 不過，「空」的資料型態是 `object`，它沒有自己的資料型態。他只是一個值，不是型別。
-> 
+>
 > 其實說來說去 `null` 沒有自己的型別純屬是一個 bug，但後來他們也沒有要修。
 > 所以我才說這是世界上最人性化的語言。
 
@@ -400,31 +406,31 @@ console.log("Hello, World!", 123);
 - 邏輯運算子：`&&`（且）、`||`（或）、`!`（非）
 
 > `===` **跟 `==` 差在哪裡？不是都「是否相等」？**
-> 
+>
 > `===`：檢查型別並檢查值是否相等
 > `==`：檢查值是否相等
-> 
+>
 > 例如：
-> 
+>
 > ```javascript
 > const daysPassed = 10;
-> 
-> console.log("==",  daysPassed ==  "10");
+>
+> console.log("==", daysPassed == "10");
 > //                 ^^^^^^^^^^     ^^^^
 > //                 number         string
-> 
+>
 > console.log("===", daysPassed === "10");
 > //                 ^^^^^^^^^^     ^^^^
 > //                 number         string
 > ```
-> 
+>
 > 結果：
-> 
+>
 > ```other
 > == true
 > === false
 > ```
-> 
+>
 > 你會發現，在 JavaScript 中使用 `==` 時，它只會看內容的一致性，而不檢查型別。據說這是為了讓整個語言更人性化。
 
 #### 條件判斷
@@ -452,7 +458,7 @@ if (recipe == "高麗菜煮蛋") {
 在本程式中，將 `recipe` 改為其他字串，程式會依據判斷式，產生不同的結果。
 
 > **注意：**
-> 
+>
 > 在 `if` 後面一定要加括弧 `(`，後面才能接判斷式！
 
 #### 迴圈（Loops）
@@ -469,8 +475,8 @@ for (let i = 0; i < times; i++) {
 
 let mangoJump = 7;
 while (mangoJump > 0) {
-    console.log("我喜歡你");
-    mangoJump--;
+  console.log("我喜歡你");
+  mangoJump--;
 }
 ```
 
@@ -556,7 +562,6 @@ button.addEventListener("click", onClick);
 
 當你按下按鈕時，便會跳出訊息。當然，你可以做除了跳訊息之外的事，你可以看看實作欄在做些什麼。
 
-
 ## 4 - 實作指導
 
 在這個實作欄，如果你願意跟隨，我們將做出一個**簡易的待辦清單**。這個欄位會在我們了解基本語法後出現，而你可以選擇完全跳過這一部分，試試看做出一個屬於自己的網站，或把這裡當作參考用程式碼。
@@ -574,7 +579,7 @@ button.addEventListener("click", onClick);
   </head>
   <body>
     <h1>待辦事項</h1>
-    
+
     <input type="text" placeholder="要做什麼？" />
     <button>新增</button>
 
@@ -587,7 +592,7 @@ button.addEventListener("click", onClick);
 
 - `<input type="text" />`：文字輸入
 - `<ul>`：無序清單
-- `<li>`：清單列，待會利用 JavaScript 放在 `<ul>` 
+- `<li>`：清單列，待會利用 JavaScript 放在 `<ul>`
 
 你可以看看在瀏覽器上長什麼樣子。很顯然地，非常的醜，因此待會在了解 CSS 後，我們便可以美化它！
 
@@ -596,54 +601,54 @@ button.addEventListener("click", onClick);
 老樣子，把 CSS 連結加到 `<head>`：
 
 ```html
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 ```
 
 接著，加入 CSS：
 
 ```css
 body {
-    /* 讓字體變得好看一點 */
-    font-family: sans-serif;
+  /* 讓字體變得好看一點 */
+  font-family: sans-serif;
 
-    /* 內部元素文字置中 */
-    text-align: center;
+  /* 內部元素文字置中 */
+  text-align: center;
 }
 
 input {
-    /* 輸入框內部留一點白 */
-    padding: 8px;
+  /* 輸入框內部留一點白 */
+  padding: 8px;
 
-    /* 設定字體大小 */
-    font-size: 16px;
+  /* 設定字體大小 */
+  font-size: 16px;
 }
 
 button {
-    /* 內部留白：上下 左右  */
-    padding: 8px 16px;
+  /* 內部留白：上下 左右  */
+  padding: 8px 16px;
 
-    font-size: 16px;
+  font-size: 16px;
 
-    /* 滑鼠移到按鈕上換成小手指 */
-    cursor: pointer;
+  /* 滑鼠移到按鈕上換成小手指 */
+  cursor: pointer;
 }
 
 ul {
-    /* 把清單旁的「•」拿掉 */
-    list-style: none;
+  /* 把清單旁的「•」拿掉 */
+  list-style: none;
 
-    /* 內部不用留白 */
-    padding: 0;
-    max-width: 300px;
-    margin: 20px auto;
+  /* 內部不用留白 */
+  padding: 0;
+  max-width: 300px;
+  margin: 20px auto;
 }
 
 li {
-    /* 外部留白：上下 左右 */
-    margin: 8px 0;
+  /* 外部留白：上下 左右 */
+  margin: 8px 0;
 
-    /* 內部文字靠左 */
-    text-align: left;
+  /* 內部文字靠左 */
+  text-align: left;
 }
 ```
 
@@ -663,22 +668,22 @@ const button = document.querySelector("button");
 const list = document.querySelector("ul");
 
 function addTodo() {
-    // 如果輸入框是空的，不做任何事
-    if (input.value === "") {
-        return;
-    }
+  // 如果輸入框是空的，不做任何事
+  if (input.value === "") {
+    return;
+  }
 
-    // 建立一個新的 <li> 元素
-    const item = document.createElement("li");
+  // 建立一個新的 <li> 元素
+  const item = document.createElement("li");
 
-    // 設定文字內容
-    item.textContent = input.value;
+  // 設定文字內容
+  item.textContent = input.value;
 
-    // 把新的 <li> 加進 <ul> 裡
-    list.appendChild(item);
+  // 把新的 <li> 加進 <ul> 裡
+  list.appendChild(item);
 
-    // 清空輸入框，方便繼續輸入下一項
-    input.value = "";
+  // 清空輸入框，方便繼續輸入下一項
+  input.value = "";
 }
 
 button.addEventListener("click", addTodo);
@@ -694,14 +699,14 @@ button.addEventListener("click", addTodo);
 
 #### 結構類
 
-| 標籤        | 說明                   |
-| --------- | -------------------- |
-| `<div>`     | 一個區塊容器，常用來做排版分區      |
+| 標籤        | 說明                                     |
+| ----------- | ---------------------------------------- |
+| `<div>`     | 一個區塊容器，常用來做排版分區           |
 | `<span>`    | 行內容器，常用來包住一小段文字做特殊處理 |
-| `<header>`  | 頁首區塊（標題、導覽列等）        |
-| `<footer>`  | 頁尾區塊（版權資訊、聯絡方式等）     |
-| `<nav>`     | 導覽列區塊                |
-| `<section>` | 內容分區                 |
+| `<header>`  | 頁首區塊（標題、導覽列等）               |
+| `<footer>`  | 頁尾區塊（版權資訊、聯絡方式等）         |
+| `<nav>`     | 導覽列區塊                               |
+| `<section>` | 內容分區                                 |
 
 ```html
 <section>
@@ -714,36 +719,34 @@ button.addEventListener("click", addTodo);
 
 #### 文字類
 
-| 標籤          | 說明                   |
-| ----------- | -------------------- |
-| `<h1>` ~ `<h6>` | 標題，由大到小              |
-| `<p>`         | 段落文字                 |
-| `<b>`         | 加粗（僅視覺）              |
-| `<strong>`    | 加粗（語意上表示重要，對視覺障礙者友善） |
-| `<em>`        | 斜體（語意上表示強調，對視覺障礙者友善） |
-| `<br>`        | 換行（置空元素）             |
-| `<hr>`        | 分隔線（置空元素）            |
+| 標籤            | 說明                                     |
+| --------------- | ---------------------------------------- |
+| `<h1>` ~ `<h6>` | 標題，由大到小                           |
+| `<p>`           | 段落文字                                 |
+| `<b>`           | 加粗（僅視覺）                           |
+| `<strong>`      | 加粗（語意上表示重要，對視覺障礙者友善） |
+| `<em>`          | 斜體（語意上表示強調，對視覺障礙者友善） |
+| `<br>`          | 換行（置空元素）                         |
+| `<hr>`          | 分隔線（置空元素）                       |
 
 ```html
 <h1>歡迎光臨</h1>
 <h2>My Donalds</h2>
 <p>
-  笛卡兒曾經告訴世人，閱讀一切好書如同和過去最傑出的人談話。<br>
+  笛卡兒曾經告訴世人，閱讀一切好書如同和過去最傑出的人談話。<br />
   這啟發了我，非洲有一句名言，最靈繁的人也看不見自己的背脊。
 </p>
-<hr>
-<p>
-  所以說，薯餅加漢堡不就是<strong>澱粉加澱粉</strong>嗎？
-</p>
+<hr />
+<p>所以說，薯餅加漢堡不就是<strong>澱粉加澱粉</strong>嗎？</p>
 ```
 
 #### 清單類
 
-| 標籤   | 說明                                        |
-| ---- | ----------------------------------------- |
-| `<ul>` | 無序（Unordered）清單，項目符號「•」                   |
+| 標籤   | 說明                                                      |
+| ------ | --------------------------------------------------------- |
+| `<ul>` | 無序（Unordered）清單，項目符號「•」                      |
 | `<ol>` | 有序（Ordered）清單，數字編號<br>使用 start="3" 從 3 開始 |
-| `<li>` | 清單項目，包在 <ul> 或 <ol> 裡                     |
+| `<li>` | 清單項目，包在 <ul> 或 <ol> 裡                            |
 
 ```html
 <ul>
@@ -760,9 +763,9 @@ button.addEventListener("click", addTodo);
 
 #### 連結與媒體類
 
-| 標籤                         | 說明                    |
-| -------------------------- | --------------------- |
-| `<a href="...">`             | 超連結                   |
+| 標籤                             | 說明                                       |
+| -------------------------------- | ------------------------------------------ |
+| `<a href="...">`                 | 超連結                                     |
 | `<img src="..." alt="替代文字">` | 圖片（置空元素），若無法載入則顯示替代文字 |
 
 ```html
@@ -772,18 +775,18 @@ button.addEventListener("click", addTodo);
   超廢的
 </p>
 
-<img src="https://github.com/AWeirdDev.png" alt="流動廁所">
+<img src="https://github.com/AWeirdDev.png" alt="流動廁所" />
 ```
 
 #### 表單與互動類
 
-| 標籤         | 說明                                   |
-| ---------- | ------------------------------------ |
-| `<button>`   | 按鈕                                   |
+| 標籤         | 說明                                                               |
+| ------------ | ------------------------------------------------------------------ |
+| `<button>`   | 按鈕                                                               |
 | `<input>`    | 輸入框（置空元素，可透過 type 屬性變化成文字框、勾選框、密碼欄等） |
-| `<textarea>` | 多行文字輸入框                              |
-| `<form>`     | 表單容器，包住多個輸入元件                        |
-| `<label>`    | 表單欄位的標籤文字                            |
+| `<textarea>` | 多行文字輸入框                                                     |
+| `<form>`     | 表單容器，包住多個輸入元件                                         |
+| `<label>`    | 表單欄位的標籤文字                                                 |
 
 ```html
 <input type="text" placeholder="輸入名字..." />
@@ -798,26 +801,26 @@ button.addEventListener("click", addTodo);
 #### 文字相關
 
 ```css
-color: #333;              /* 文字顏色 */
-font-size: 16px;          /* 文字大小 */
-font-family: sans-serif;  /* 字體 */
-font-weight: bold;        /* 粗體 */
-text-align: center;       /* 文字對齊 (left/center/right) */
+color: #333; /* 文字顏色 */
+font-size: 16px; /* 文字大小 */
+font-family: sans-serif; /* 字體 */
+font-weight: bold; /* 粗體 */
+text-align: center; /* 文字對齊 (left/center/right) */
 ```
 
 #### 背景與邊框
 
 ```css
-background-color: #f5f5f5;  /* 背景顏色，可以是名稱、hex 等 */
-border: 1px solid #ccc;     /* 邊框 (粗細/實線虛線/顏色) */
-border-radius: 8px;         /* 圓角 */
+background-color: #f5f5f5; /* 背景顏色，可以是名稱、hex 等 */
+border: 1px solid #ccc; /* 邊框 (粗細/實線虛線/顏色) */
+border-radius: 8px; /* 圓角 */
 ```
 
 #### 間距
 
 ```css
-padding: 10px;    /* 內距（外部留白）：元素內容跟邊框之間的空間 */
-margin: 10px;     /* 外距（內部留白）：元素跟其他元素之間的空間 */
+padding: 10px; /* 內距（外部留白）：元素內容跟邊框之間的空間 */
+margin: 10px; /* 外距（內部留白）：元素跟其他元素之間的空間 */
 ```
 
 `padding` 是「往內擠」，`margin` 是「往外推」。
@@ -825,76 +828,78 @@ margin: 10px;     /* 外距（內部留白）：元素跟其他元素之間的�
 #### 尺寸
 
 ```css
-width: 300px;      /* 寬度 */
-height: 100px;     /* 高度 */
-max-width: 300px;  /* 最大寬度，常用在讓元素不要無限延伸 */
+width: 300px; /* 寬度 */
+height: 100px; /* 高度 */
+max-width: 300px; /* 最大寬度，常用在讓元素不要無限延伸 */
 ```
 
 #### 顯示與排版
 
 ```css
-display: none;     /* 隱藏元素 (常用在「刪除」功能，先隱藏再真的移除) */
-cursor: pointer;   /* 滑鼠移到上面變成手指 (常用在按鈕) */
-list-style: none;  /* 清單去掉預設的點點符號 */
+display: none; /* 隱藏元素 (常用在「刪除」功能，先隱藏再真的移除) */
+cursor: pointer; /* 滑鼠移到上面變成手指 (常用在按鈕) */
+list-style: none; /* 清單去掉預設的點點符號 */
 ```
 
 #### 其他
 
 ```css
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* 陰影，讓元素有立體感 */
-transition: all 0.3s ease;              /* 動畫過渡，讓變化更滑順 */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 陰影，讓元素有立體感 */
+transition: all 0.3s ease; /* 動畫過渡，讓變化更滑順 */
 ```
 
 ### 常用的 JavaScript 操作
+
 以下整理今天教材程度適合、且待辦清單等成發常會用到的 DOM 操作,依用途分類:
 
 #### 選取元素
 
 ```js
-document.querySelector("button");        // 選第一個符合的元素
-document.querySelectorAll("li");         // 選所有符合的元素 (回傳一個特殊節點清單)
-document.getElementById("myId");         // 用 id 選取
+document.querySelector("button"); // 選第一個符合的元素
+document.querySelectorAll("li"); // 選所有符合的元素 (回傳一個特殊節點清單)
+document.getElementById("myId"); // 用 id 選取
 ```
 
 #### 建立、插入與刪除元素
 
 ```js
-const item = document.createElement("li");   // 建立一個新元素
-list.appendChild(item);                      // 加到某個元素的最後面
+const item = document.createElement("li"); // 建立一個新元素
+list.appendChild(item); // 加到某個元素的最後面
 
-list.removeChild(item);   // 從 list 中移除 item 元素
-item.remove();            // 直接移除 item 元素
+list.removeChild(item); // 從 list 中移除 item 元素
+item.remove(); // 直接移除 item 元素
 ```
 
 #### 讀取與修改內容
 
 ```js
-element.textContent = "hey";        // 修改純文字內容
-element.innerHTML = "<b>boo</b>";   // 直接修改 HTML 內容，非常不建議
-input.value                         // 取得輸入框的值
-input.value = "";                   // 設定輸入框內容文字
+element.textContent = "hey"; // 修改純文字內容
+element.innerHTML = "<b>boo</b>"; // 直接修改 HTML 內容，非常不建議
+input.value; // 取得輸入框的值
+input.value = ""; // 設定輸入框內容文字
 ```
 
 #### 修改樣式與屬性
 
 ```js
 // 操作 CSS 屬性
-element.style.color = "red";              // 直接改一個樣式
-element.style.backgroundColor = "blue";   // 改背景色 (注意駝峰式命名，沒有「-」)
+element.style.color = "red"; // 直接改一個樣式
+element.style.backgroundColor = "blue"; // 改背景色 (注意駝峰式命名，沒有「-」)
 
-element.classList.add("myclass");            // 加入一個 class
-element.classList.remove("myclass");         // 移除一個 class
-element.classList.toggle("myclass");         // 有就移除，沒有就加上 (切換用)
+element.classList.add("myclass"); // 加入一個 class
+element.classList.remove("myclass"); // 移除一個 class
+element.classList.toggle("myclass"); // 有就移除，沒有就加上 (切換用)
 ```
 
 #### 事件監聽
 
 ```js
-button.addEventListener("click", 函式名稱);   // 點擊事件
-input.addEventListener("keydown", 函式名稱);  // 按下鍵盤按鍵 (例如按 Enter 新增)
+button.addEventListener("click", 函式名稱); // 點擊事件
+input.addEventListener("keydown", 函式名稱); // 按下鍵盤按鍵 (例如按 Enter 新增)
 ```
 
 #### 判斷與迴圈
+
 ```js
 if (input.value === "") { return; }   // 空值檢查
 for (const el of elements) { ... }    // 走訪所有選到的元素，搭配 querySelectorAll
