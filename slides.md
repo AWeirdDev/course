@@ -47,6 +47,11 @@ class: bg-orange-50 dark:bg-black
 </div>
 
 ---
+src: ./pages/0-preface.md
+hide: false
+---
+
+---
 src: ./pages/1-whoami.md
 hide: false
 ---

@@ -229,6 +229,8 @@ if (recipe == "高麗菜煮蛋") {
 }
 ```
 
+<img src="../images/5_cringe.jpeg" width="320" class="mt-10" />
+
 </template>
 
 <template #5>

@@ -36,7 +36,7 @@ transition: fade
 ---
 
 <div class="text-center">
-<p>以咕嚕咕嚕網站為例</p>
+<p>來看看 Google</p>
 </div>
 
 <div class="absolute top-0 bottom-0 mt-24">

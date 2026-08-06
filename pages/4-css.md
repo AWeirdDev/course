@@ -28,7 +28,29 @@ clicks: 1
 <img src="../images/4_watches.png" class="rounded-md" width="320" v-if="$clicks == 0" />
 <img src="../images/4_gem.png" class="rounded-md" width="320" v-if="$clicks == 1" />
 
-<h2 v-if="$clicks == 1" class="mt-5">有人說是 "declaration language"</h2>
+<h2 v-if="$clicks == 1" class="mt-5">有人說是 "宣告語言"</h2>
+<p class="flex flex-row items-center opacity-55" v-if="$clicks == 1">
+    <span>別這麼說</span>
+    <Emoji emoji="✋" class="size-4" />
+    <Emoji emoji="😭" class="size-4" />
+    <Emoji emoji="🤚" class="size-4" />
+    <span>別這麼說</span>
+    <Emoji emoji="✋" class="size-4" />
+    <Emoji emoji="😭" class="size-4" />
+    <Emoji emoji="🤚" class="size-4" />
+    <span>別這麼說</span>
+    <Emoji emoji="✋" class="size-4" />
+    <Emoji emoji="😭" class="size-4" />
+    <Emoji emoji="🤚" class="size-4" />
+    <span>別這麼說</span>
+    <Emoji emoji="✋" class="size-4" />
+    <Emoji emoji="😭" class="size-4" />
+    <Emoji emoji="🤚" class="size-4" />
+    <span>別這麼說</span>
+    <Emoji emoji="✋" class="size-4" />
+    <Emoji emoji="😭" class="size-4" />
+    <Emoji emoji="🤚" class="size-4" />
+</p>
 
 <!-- preload -->
 <img src="../images/4_gem.png" class="absolute opacity-0%" />
