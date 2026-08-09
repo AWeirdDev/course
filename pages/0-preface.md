@@ -2,12 +2,6 @@
 layout: center
 ---
 
-# 幹嘛學網頁設計？
-
----
-layout: center
----
-
 <img src="../images/0_china_tv_weird.jpg" width="600" class="rounded-md" />
 
 ---
@@ -53,6 +47,12 @@ transition: slide-up
   :width="$clicks == 0 ? 600 : 450"
   :style="{ marginTop: $clicks == 0 ? 0 : '100px' }"
 />
+
+---
+layout: center
+---
+
+# 幹嘛學網頁設計？
 
 ---
 layout: center
